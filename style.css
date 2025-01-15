@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  /*Primary color  */
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+
+  /* Neutral */
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray: hsl(0, 0%, 95%);
+}
+
+body {
+  background-color: var(--Very-light-gray);
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-radius: 8px;
+  margin: 2rem;
+  overflow: hidden;
+}
+
+.box1 {
+  background-color: var(--Bright-orange);
+}
+
+.box2 {
+  background-color: var(--Dark-cyan);
+}
+
+.box3 {
+  background-color: var(--Very-dark-cyan);
+}
+
+.card {
+  padding: 40px;
+}
+
+.card h2 {
+  font-family: "Big Shoulders Display", cursive;
+  color: var(--Very-light-gray);
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+.card p {
+  color: var(--Transparent-white);
+  line-height: 1.6;
+}
+
+.card a {
+  text-decoration: none;
+  background-color: var(--Very-light-gray);
+  padding: 12px 24px;
+  border-radius: 26px;
+  margin-top: 60px;
+  display: inline-block;
+  border: solid 2px var(--Transparent-white);
+  transition: all 0.4s ease-in-out;
+}
+
+.box1 a {
+  color: var(--Bright-orange);
+}
+
+.box2 a {
+  color: var(--Dark-cyan);
+}
+
+.box3 a {
+  color: var(--Very-dark-cyan);
+}
+
+.card a:hover {
+  color: var(--Transparent-white);
+  background-color: transparent;
+}
+
+.attribution {
+  background-color: var(--Transparent-white);
+  color: #333;
+  padding: 20px;
+  text-align: center;
+  border-top: solid 2px #ccc;
+  position: relative;
+  margin-top: 40px;
+}
+
+.attribution a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr;
+    margin: 1rem 0.5rem;
+  }
+}
